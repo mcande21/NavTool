@@ -14,6 +14,9 @@
 		424B32482B2A9B8D00FE8F00 /* NavToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B32472B2A9B8D00FE8F00 /* NavToolTests.swift */; };
 		424B32522B2A9B8D00FE8F00 /* NavToolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B32512B2A9B8D00FE8F00 /* NavToolUITests.swift */; };
 		424B32542B2A9B8D00FE8F00 /* NavToolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B32532B2A9B8D00FE8F00 /* NavToolUITestsLaunchTests.swift */; };
+		424B32612B2A9BF000FE8F00 /* CompassMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B32602B2A9BF000FE8F00 /* CompassMarkerView.swift */; };
+		424B32632B2AA1FF00FE8F00 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B32622B2AA1FF00FE8F00 /* Marker.swift */; };
+		424B32652B2AA23A00FE8F00 /* Compass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B32642B2AA23A00FE8F00 /* Compass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		424B324D2B2A9B8D00FE8F00 /* NavToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		424B32512B2A9B8D00FE8F00 /* NavToolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavToolUITests.swift; sourceTree = "<group>"; };
 		424B32532B2A9B8D00FE8F00 /* NavToolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavToolUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		424B32602B2A9BF000FE8F00 /* CompassMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassMarkerView.swift; sourceTree = "<group>"; };
+		424B32622B2AA1FF00FE8F00 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		424B32642B2AA23A00FE8F00 /* Compass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				424B32382B2A9B8B00FE8F00 /* ContentView.swift */,
 				424B323A2B2A9B8D00FE8F00 /* Assets.xcassets */,
 				424B323C2B2A9B8D00FE8F00 /* Preview Content */,
+				424B32602B2A9BF000FE8F00 /* CompassMarkerView.swift */,
+				424B32622B2AA1FF00FE8F00 /* Marker.swift */,
+				424B32642B2AA23A00FE8F00 /* Compass.swift */,
 			);
 			path = NavTool;
 			sourceTree = "<group>";
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424B32652B2AA23A00FE8F00 /* Compass.swift in Sources */,
 				424B32392B2A9B8B00FE8F00 /* ContentView.swift in Sources */,
+				424B32632B2AA1FF00FE8F00 /* Marker.swift in Sources */,
 				424B32372B2A9B8B00FE8F00 /* NavToolApp.swift in Sources */,
+				424B32612B2A9BF000FE8F00 /* CompassMarkerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
