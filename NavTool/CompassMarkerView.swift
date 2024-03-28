@@ -14,7 +14,7 @@ struct CompasMarkerView: View {
     var body: some View {
         VStack {
             // numbers
-            Text(marker.degreeText()).fontWeight(.light).rotationEffect(Angle(degrees: self.compassDegrees))
+            Text(marker.degreeText()).fontWeight(.light).font(.subheadline).rotationEffect(Angle(degrees: self.compassDegrees))
             Spacer(minLength: 120)
             // dashes
             Capsule().frame(width: self.capsuleWidth(), height: self.capsuleHeight()).foregroundColor(self.capsuleColor())
