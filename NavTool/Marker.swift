@@ -6,7 +6,7 @@
 //
 import SwiftUI
 struct Marker: Hashable {
-    let degrees:Double
+    let degrees: Double
     let label: String
     
     init(degrees: Double, label: String = "") {

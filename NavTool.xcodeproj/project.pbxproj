@@ -17,6 +17,7 @@
 		424B32612B2A9BF000FE8F00 /* CompassMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B32602B2A9BF000FE8F00 /* CompassMarkerView.swift */; };
 		424B32632B2AA1FF00FE8F00 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B32622B2AA1FF00FE8F00 /* Marker.swift */; };
 		424B32652B2AA23A00FE8F00 /* Compass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B32642B2AA23A00FE8F00 /* Compass.swift */; };
+		42B3B94D2BB5A8900005A176 /* MapCompass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B3B94C2BB5A8900005A176 /* MapCompass.swift */; };
 		42D295AD2BB4AE1300413D83 /* GETGPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D295AC2BB4AE1300413D83 /* GETGPS.swift */; };
 		42D295AF2BB4B69C00413D83 /* GPSscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D295AE2BB4B69C00413D83 /* GPSscreen.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		424B32602B2A9BF000FE8F00 /* CompassMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassMarkerView.swift; sourceTree = "<group>"; };
 		424B32622B2AA1FF00FE8F00 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		424B32642B2AA23A00FE8F00 /* Compass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compass.swift; sourceTree = "<group>"; };
+		42B3B94C2BB5A8900005A176 /* MapCompass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCompass.swift; sourceTree = "<group>"; };
 		42D295AC2BB4AE1300413D83 /* GETGPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETGPS.swift; sourceTree = "<group>"; };
 		42D295AE2BB4B69C00413D83 /* GPSscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSscreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 				424B32642B2AA23A00FE8F00 /* Compass.swift */,
 				42D295AC2BB4AE1300413D83 /* GETGPS.swift */,
 				42D295AE2BB4B69C00413D83 /* GPSscreen.swift */,
+				42B3B94C2BB5A8900005A176 /* MapCompass.swift */,
 			);
 			path = NavTool;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				424B32372B2A9B8B00FE8F00 /* NavToolApp.swift in Sources */,
 				424B32612B2A9BF000FE8F00 /* CompassMarkerView.swift in Sources */,
 				42D295AF2BB4B69C00413D83 /* GPSscreen.swift in Sources */,
+				42B3B94D2BB5A8900005A176 /* MapCompass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,7 @@ struct GPSscreen: View {
     
     var body: some View {
         VStack {
+            MapCompass(compassHeading: CompassHeading(), TrackBearing: false, Map: false, pinbearing: .zero, degreegive: 5)
             Text("You are at: ")
             Text("Latitude: \(coordinates.lat)")
                 .font(.subheadline)

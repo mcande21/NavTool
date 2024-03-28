@@ -23,15 +23,15 @@ struct CompasMarkerView: View {
                 .padding(.bottom, 40)
         }
         // this will rotate the numbers so always readable
-        .rotationEffect(Angle(degrees: marker.degrees))
+        .rotationEffect(Angle(degrees: Double(marker.degrees)))
     }
     // Capsule Width if zero
     private func capsuleWidth() -> CGFloat {
-        return marker.degrees == 180 ? 7 : 3
+        return marker.degrees == 180 ? 5 : 3
     }
     // Capsule Height if zero
     private func capsuleHeight() -> CGFloat {
-        return marker.degrees == 180 ? 45 : 30
+        return marker.degrees == 180 ? 25 : 20
     }
     // Capsule color red if zero
     private func capsuleColor() -> Color {
@@ -39,6 +39,6 @@ struct CompasMarkerView: View {
     }
     //angle applied to text
     private func textAngle() -> Angle {
-        return Angle(degrees: self.compassDegrees - self.marker.degrees)
+        return Angle(degrees: Double(self.compassDegrees) - Double(self.marker.degrees))
     }
 }
