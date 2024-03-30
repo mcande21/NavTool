@@ -18,6 +18,8 @@
 		424B32632B2AA1FF00FE8F00 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B32622B2AA1FF00FE8F00 /* Marker.swift */; };
 		424B32652B2AA23A00FE8F00 /* Compass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424B32642B2AA23A00FE8F00 /* Compass.swift */; };
 		42B3B94D2BB5A8900005A176 /* MapCompass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B3B94C2BB5A8900005A176 /* MapCompass.swift */; };
+		42C7F9802BB855CA00EA4043 /* ArcGIS in Frameworks */ = {isa = PBXBuildFile; productRef = 42C7F97F2BB855CA00EA4043 /* ArcGIS */; };
+		42C7F9822BB855D100EA4043 /* ArcGISToolkit in Frameworks */ = {isa = PBXBuildFile; productRef = 42C7F9812BB855D100EA4043 /* ArcGISToolkit */; };
 		42D295AD2BB4AE1300413D83 /* GETGPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D295AC2BB4AE1300413D83 /* GETGPS.swift */; };
 		42D295AF2BB4B69C00413D83 /* GPSscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D295AE2BB4B69C00413D83 /* GPSscreen.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C7F9822BB855D100EA4043 /* ArcGISToolkit in Frameworks */,
+				42C7F9802BB855CA00EA4043 /* ArcGIS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +94,7 @@
 				424B32462B2A9B8D00FE8F00 /* NavToolTests */,
 				424B32502B2A9B8D00FE8F00 /* NavToolUITests */,
 				424B32342B2A9B8B00FE8F00 /* Products */,
+				42C7F97E2BB855CA00EA4043 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +150,13 @@
 			path = NavToolUITests;
 			sourceTree = "<group>";
 		};
+		42C7F97E2BB855CA00EA4043 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,6 +173,10 @@
 			dependencies = (
 			);
 			name = NavTool;
+			packageProductDependencies = (
+				42C7F97F2BB855CA00EA4043 /* ArcGIS */,
+				42C7F9812BB855D100EA4043 /* ArcGISToolkit */,
+			);
 			productName = NavTool;
 			productReference = 424B32332B2A9B8B00FE8F00 /* NavTool.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +249,10 @@
 				Base,
 			);
 			mainGroup = 424B322A2B2A9B8B00FE8F00;
+			packageReferences = (
+				42C7F90B2BB8485C00EA4043 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift" */,
+				42C7F90C2BB8498F00EA4043 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift-toolkit" */,
+			);
 			productRefGroup = 424B32342B2A9B8B00FE8F00 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -614,6 +634,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42C7F90B2BB8485C00EA4043 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Esri/arcgis-maps-sdk-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 200.3.0;
+			};
+		};
+		42C7F90C2BB8498F00EA4043 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift-toolkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Esri/arcgis-maps-sdk-swift-toolkit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 200.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42C7F97F2BB855CA00EA4043 /* ArcGIS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42C7F90B2BB8485C00EA4043 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift" */;
+			productName = ArcGIS;
+		};
+		42C7F9812BB855D100EA4043 /* ArcGISToolkit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42C7F90C2BB8498F00EA4043 /* XCRemoteSwiftPackageReference "arcgis-maps-sdk-swift-toolkit" */;
+			productName = ArcGISToolkit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 424B322B2B2A9B8B00FE8F00 /* Project object */;
 }

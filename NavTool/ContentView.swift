@@ -21,7 +21,7 @@ struct ContentView: View {
                 ZStack{
                     ForEach(Marker.markers(), id: \.self) {marker in
                         //CompassViewMaker
-                        CompasMarkerView(marker: marker, compassDegrees: 0)
+                        CompasMarkerView(marker: marker, compassDegrees: 0, mapcompas: false)
                         }
                     Text(self.compassHeading.degrees.rounded().description).bold().font(.subheadline).rotationEffect(Angle(degrees: self.compassHeading.degrees))
                     }.frame(width: 50, height: 300).rotationEffect(Angle(degrees: -self.compassHeading.degrees)).statusBar(hidden: true).padding()

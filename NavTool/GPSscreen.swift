@@ -7,6 +7,7 @@
 
 import Combine
 import SwiftUI
+import ArcGIS
 
 struct GPSscreen: View {
     
@@ -14,21 +15,27 @@ struct GPSscreen: View {
 
     @State var tokens: Set<AnyCancellable> = []
     @State var coordinates: (lat: Double, lon: Double) = (0, 0)
-    
+    @State private var map = {
+        let map = Map(basemapStyle: .arcGISTopographic)
+
+        map.initialViewpoint = Viewpoint(latitude: 0, longitude: 0, scale: 72_000)
+
+            return map
+        }()
     var body: some View {
         VStack {
-            MapCompass(compassHeading: CompassHeading(), TrackBearing: false, Map: false, pinbearing: .zero, degreegive: 5)
-            Text("You are at: ")
-            Text("Latitude: \(coordinates.lat)")
-                .font(.subheadline)
-            Text("Longitude: \(coordinates.lon)")
-                .font(.subheadline)
+            MapCompass(compassHeading: CompassHeading(), TrackBearing: false, Mapbool: false, pinbearing: .zero, degreegive: 5)
+            MapView(map: map)
         }
         .onAppear {
             observeCoordinateUpdates()
             observeDeniedLocationAccess()
             deviceLocationService.requestLocationUpdates()
+            updateViewPoint()
         }
+    }
+    func updateViewPoint() {
+        map.initialViewpoint = Viewpoint(latitude: coordinates.lat, longitude: coordinates.lon, scale: 72_000)
     }
     
     func observeCoordinateUpdates() {

@@ -42,6 +42,18 @@ struct Marker: Hashable {
         Marker(degrees: 345),
         ]
     }
+    static func mapmarkers() -> [Marker] {
+        return [
+        Marker(degrees: 0, label: "S"),
+        Marker(degrees: 45),
+        Marker(degrees: 90, label: "W"),
+        Marker(degrees: 135),
+        Marker(degrees: 180, label: "N"),
+        Marker(degrees: 225),
+        Marker(degrees: 270, label: "E"),
+        Marker(degrees: 315),
+        ]
+    }
     func degreeText() -> String {
         return String(format: "%.0f", self.degrees)
     }
