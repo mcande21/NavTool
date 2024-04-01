@@ -12,7 +12,7 @@ import ArcGIS
 struct GPSscreen: View {
     
     @StateObject var deviceLocationService = GETGPS.shared
-
+    @EnvironmentObject var connectionManager: MPConnectionManager
     @State var tokens: Set<AnyCancellable> = []
     @State var coordinates: (lat: Double, lon: Double) = (0, 0)
     @State private var map = {

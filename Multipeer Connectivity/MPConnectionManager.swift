@@ -17,9 +17,9 @@ class MPConnectionManager: NSObject, ObservableObject {
     let myPeerId: MCPeerID
     let nearbyServiceAdvertiser: MCNearbyServiceAdvertiser
     let nearbyServiceBrowser: MCNearbyServiceBrowser
-    var game: GETGPS?
+    var game: GPSscreen?
     
-    func setup(game:GETGPS) {
+    func setup(game:GPSscreen) {
         self.game = game
     }
     
@@ -136,12 +136,12 @@ extension MPConnectionManager: MCSessionDelegate {
                 case .start:
                    break
                 case .lat:
-                    if let index = gameMove.Index {
-                        self.game?.requestLocationUpdates()
+                    if let location = gameMove.Location {
+                        self.game?.coordinates.lat
                     }
                 case .lon:
-                    if let index = gameMove.Index {
-                        self.game?.requestLocationUpdates()
+                    if let location = gameMove.Location {
+                        self.game?.coordinates.lon
                     }
                 case .end:
                     self.session.disconnect()

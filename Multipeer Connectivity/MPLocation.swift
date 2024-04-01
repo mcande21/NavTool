@@ -13,7 +13,7 @@ struct MPLocation: Codable {
     }
     let action: Action
     let playrName: String?
-    let Index: Double?
+    let Location: Double?
     
     func data() -> Data? {
         try? JSONEncoder().encode(self)
