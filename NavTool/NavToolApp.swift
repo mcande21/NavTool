@@ -15,7 +15,7 @@ struct NavToolApp: App {
         }
     var body: some SwiftUI.Scene {
         WindowGroup {
-            ContentView()
+            ContentView(yourName: "Cooper")
                 .ignoresSafeArea()
         }
     }

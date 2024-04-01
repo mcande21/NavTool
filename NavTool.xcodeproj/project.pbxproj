@@ -20,6 +20,11 @@
 		42B3B94D2BB5A8900005A176 /* MapCompass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B3B94C2BB5A8900005A176 /* MapCompass.swift */; };
 		42C7F9802BB855CA00EA4043 /* ArcGIS in Frameworks */ = {isa = PBXBuildFile; productRef = 42C7F97F2BB855CA00EA4043 /* ArcGIS */; };
 		42C7F9822BB855D100EA4043 /* ArcGISToolkit in Frameworks */ = {isa = PBXBuildFile; productRef = 42C7F9812BB855D100EA4043 /* ArcGISToolkit */; };
+		42C7F9C92BB9AEBA00EA4043 /* MPConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7F9C82BB9AEBA00EA4043 /* MPConnectionManager.swift */; };
+		42C7F9CB2BB9B53600EA4043 /* MPLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7F9CA2BB9B53600EA4043 /* MPLocation.swift */; };
+		42C7F9CD2BB9F47E00EA4043 /* MPpeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7F9CC2BB9F47E00EA4043 /* MPpeerView.swift */; };
+		42C7F9CF2BBA60E100EA4043 /* ShowDeviceLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7F9CE2BBA60E100EA4043 /* ShowDeviceLocationView.swift */; };
+		42C7F9D22BBA639500EA4043 /* ShowDeviceLocationHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C7F9D12BBA639500EA4043 /* ShowDeviceLocationHistoryView.swift */; };
 		42D295AD2BB4AE1300413D83 /* GETGPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D295AC2BB4AE1300413D83 /* GETGPS.swift */; };
 		42D295AF2BB4B69C00413D83 /* GPSscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D295AE2BB4B69C00413D83 /* GPSscreen.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +61,12 @@
 		424B32622B2AA1FF00FE8F00 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		424B32642B2AA23A00FE8F00 /* Compass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compass.swift; sourceTree = "<group>"; };
 		42B3B94C2BB5A8900005A176 /* MapCompass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCompass.swift; sourceTree = "<group>"; };
+		42C7F9C62BB9ADD600EA4043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		42C7F9C82BB9AEBA00EA4043 /* MPConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPConnectionManager.swift; sourceTree = "<group>"; };
+		42C7F9CA2BB9B53600EA4043 /* MPLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPLocation.swift; sourceTree = "<group>"; };
+		42C7F9CC2BB9F47E00EA4043 /* MPpeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPpeerView.swift; sourceTree = "<group>"; };
+		42C7F9CE2BBA60E100EA4043 /* ShowDeviceLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDeviceLocationView.swift; sourceTree = "<group>"; };
+		42C7F9D12BBA639500EA4043 /* ShowDeviceLocationHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDeviceLocationHistoryView.swift; sourceTree = "<group>"; };
 		42D295AC2BB4AE1300413D83 /* GETGPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETGPS.swift; sourceTree = "<group>"; };
 		42D295AE2BB4B69C00413D83 /* GPSscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSscreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +101,8 @@
 		424B322A2B2A9B8B00FE8F00 = {
 			isa = PBXGroup;
 			children = (
+				42C7F9D02BBA636C00EA4043 /* DeviceLocation */,
+				42C7F9C72BB9AE8D00EA4043 /* Multipeer Connectivity */,
 				424B32352B2A9B8B00FE8F00 /* NavTool */,
 				424B32462B2A9B8D00FE8F00 /* NavToolTests */,
 				424B32502B2A9B8D00FE8F00 /* NavToolUITests */,
@@ -111,6 +124,7 @@
 		424B32352B2A9B8B00FE8F00 /* NavTool */ = {
 			isa = PBXGroup;
 			children = (
+				42C7F9C62BB9ADD600EA4043 /* Info.plist */,
 				424B32362B2A9B8B00FE8F00 /* NavToolApp.swift */,
 				424B32382B2A9B8B00FE8F00 /* ContentView.swift */,
 				424B323A2B2A9B8D00FE8F00 /* Assets.xcassets */,
@@ -155,6 +169,25 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42C7F9C72BB9AE8D00EA4043 /* Multipeer Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				42C7F9C82BB9AEBA00EA4043 /* MPConnectionManager.swift */,
+				42C7F9CA2BB9B53600EA4043 /* MPLocation.swift */,
+				42C7F9CC2BB9F47E00EA4043 /* MPpeerView.swift */,
+			);
+			path = "Multipeer Connectivity";
+			sourceTree = "<group>";
+		};
+		42C7F9D02BBA636C00EA4043 /* DeviceLocation */ = {
+			isa = PBXGroup;
+			children = (
+				42C7F9CE2BBA60E100EA4043 /* ShowDeviceLocationView.swift */,
+				42C7F9D12BBA639500EA4043 /* ShowDeviceLocationHistoryView.swift */,
+			);
+			path = DeviceLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,8 +333,13 @@
 				424B32392B2A9B8B00FE8F00 /* ContentView.swift in Sources */,
 				424B32632B2AA1FF00FE8F00 /* Marker.swift in Sources */,
 				424B32372B2A9B8B00FE8F00 /* NavToolApp.swift in Sources */,
+				42C7F9D22BBA639500EA4043 /* ShowDeviceLocationHistoryView.swift in Sources */,
+				42C7F9C92BB9AEBA00EA4043 /* MPConnectionManager.swift in Sources */,
 				424B32612B2A9BF000FE8F00 /* CompassMarkerView.swift in Sources */,
+				42C7F9CB2BB9B53600EA4043 /* MPLocation.swift in Sources */,
+				42C7F9CF2BBA60E100EA4043 /* ShowDeviceLocationView.swift in Sources */,
 				42D295AF2BB4B69C00413D83 /* GPSscreen.swift in Sources */,
+				42C7F9CD2BB9F47E00EA4043 /* MPpeerView.swift in Sources */,
 				42B3B94D2BB5A8900005A176 /* MapCompass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +507,8 @@
 				DEVELOPMENT_TEAM = UM222WLT9L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NavTool/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Would like to share Location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "So people can see you";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -499,6 +539,8 @@
 				DEVELOPMENT_TEAM = UM222WLT9L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NavTool/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Would like to share Location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "So people can see you";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

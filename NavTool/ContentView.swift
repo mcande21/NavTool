@@ -9,10 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var compassHeading = CompassHeading()
+    @StateObject var connectionManager: MPConnectionManager
+    @AppStorage("yourName") var yourName = ""
     @State var TrackBearing = false
     @State var Map = false
     @State var pinbearing: Double = .zero
     @State var degreegive = 5
+    init(yourName: String) {
+        self.yourName = yourName
+        _connectionManager = StateObject(wrappedValue: MPConnectionManager(yourName: yourName))
+    }
     var body: some View {
         NavigationStack {
             VStack {
@@ -42,5 +48,5 @@ struct ContentView: View {
     }
 }
 #Preview {
-    ContentView(compassHeading: CompassHeading(), TrackBearing: false, Map: false, pinbearing: .zero, degreegive: 5)
+    ContentView(yourName: "Cooper")
 }

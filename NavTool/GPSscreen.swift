@@ -25,7 +25,7 @@ struct GPSscreen: View {
     var body: some View {
         VStack {
             MapCompass(compassHeading: CompassHeading(), TrackBearing: false, Mapbool: false, pinbearing: .zero, degreegive: 5)
-            MapView(map: map)
+            ShowDeviceLocationView()
         }
         .onAppear {
             observeCoordinateUpdates()
@@ -61,6 +61,6 @@ struct GPSscreen: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(yourName: "Cooper")
     }
 }
